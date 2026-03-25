@@ -1,0 +1,4 @@
+(use-package magit) ;; best git UI in Emacs
+
+
+(provide 'git)

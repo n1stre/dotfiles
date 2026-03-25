@@ -1,0 +1,17 @@
+(require 'package) ;; load built-in package manager
+
+;; Define package repositories (where packages are downloaded from)
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("gnu"   . "https://elpa.gnu.org/packages/")))
+
+(package-initialize) ;; initialize installed packages
+
+;; Install use-package if not already installed
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents) ;; download package list
+  (package-install 'use-package))
+
+(require 'use-package) ;; load use-package
+
+;; Automatically install packages if missing
+(setq use-package-always-ensure t)
