@@ -2,9 +2,9 @@
   :after treesit-auto
   :commands (lsp lsp-deferred)
   :hook ((js-ts-mode . lsp-deferred)
-	       (typescript-ts-mode . lsp-deferred)
-	       (tsx-ts-mode . lsp-deferred)
-	       (sh-mode . lsp-deferred)
+	 (typescript-ts-mode . lsp-deferred)
+	 (tsx-ts-mode . lsp-deferred)
+	 (sh-mode . lsp-deferred)
          (lsp-mode . lsp-enable-which-key-integration))
   :custom
   (read-process-output-max (* 1024 1024))
@@ -12,7 +12,9 @@
   (setq lsp-semgrep-languages '())
   (setq lsp-completion-provider :none)
   (setq lsp-keymap-prefix "C-c")
-  (setq lsp-diagnostics-provider :flycheck))
+  (setq lsp-diagnostics-provider :flycheck)
+  (setq lsp-session-file (expand-file-name ".cache/lsp/.lsp-session-v1" user-emacs-directory)))
+
 
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode)
