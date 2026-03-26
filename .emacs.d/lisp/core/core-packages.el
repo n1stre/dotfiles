@@ -1,6 +1,7 @@
 (require 'package)
 
-(setq package-archives '(("melpa-stable" . "https://stable.melpa.org/packages/")
+(setq package-archives '(("melpa" . "https://melpa.org/packages/") ;; comment this out if magit fails to install
+			                   ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 
