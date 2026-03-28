@@ -77,7 +77,7 @@
              (func (cadr item))
              (args (append (list (cadr (cdr item))) `(:v-adjust 0.0 :height ,size) (cdr (cddr item))))
              (icon (apply func args)))
-        (let* ((icon-pair (cons (format " %s%s%s" sep icon sep) (format " %s%s%s" sep icon sep)))
+        (let* ((icon-pair (cons (format "%s%s" icon sep) (format "%s%s" icon sep)))
                (gui-icons (treemacs-theme->gui-icons treemacs--current-theme))
                (tui-icons (treemacs-theme->tui-icons treemacs--current-theme))
                (gui-icon  (car icon-pair))
@@ -87,7 +87,7 @@
 
     ;; directory and other icons
     (treemacs-create-icon
-     :icon (format "%s%s" (nerd-icons-octicon "nf-oct-repo" :face 'treemacs-nerd-icons-root-face :height (* 1.2 size)) sep)
+     :icon (format "%s%s" (nerd-icons-octicon "nf-oct-repo" :face 'treemacs-nerd-icons-root-face :height (* 1.2 size)) sep) 
      :extensions (root-closed root-open)
      :fallback 'same-as-icon)
     (treemacs-create-icon
@@ -101,99 +101,99 @@
      :extensions (dir-closed)
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-octicon "nf-oct-code" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-octicon "nf-oct-code" :face face :height size) sep)
      :extensions ("src-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-octicon "nf-oct-code" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-octicon "nf-oct-code" :face face :height size) sep)
      :extensions ("src-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("build-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_cog" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_cog" :face face :height size) sep)
      :extensions ("build-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("test-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_check" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_check" :face face :height size) sep)
      :extensions ("test-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("bin-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_zip" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_zip" :face face :height size) sep)
      :extensions ("bin-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("git-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-sucicon "nf-custom-folder_git" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_git" :face face :height size) sep)
      :extensions ("git-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("github-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-sucicon "nf-custom-folder_github" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_github" :face face :height size) sep)
      :extensions ("github-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("public-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_eye" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_eye" :face face :height size) sep)
      :extensions ("public-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("private-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_lock" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_lock" :face face :height size) sep)
      :extensions ("private-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("temp-open" "tmp-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_question" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_question" :face face :height size) sep)
      :extensions ("temp-closed" "tmp-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("readme-open" "docs-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_file" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_file" :face face :height size) sep)
      :extensions ("readme-closed" "docs-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-sucicon "nf-custom-folder_open" :face face :height size) sep)
      :extensions ("screenshots-open" "icons-open")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-mdicon "nf-md-folder_image" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-mdicon "nf-md-folder_image" :face face :height size) sep)
      :extensions ("screenshots-closed" "icons-closed")
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_down sep (nerd-icons-octicon "nf-oct-package" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-octicon "nf-oct-package" :face face :height size) sep)
      :extensions (tag-open)
      :fallback 'same-as-icon)
     (treemacs-create-icon
-     :icon (format "%s%s%s%s" chevron_right sep (nerd-icons-octicon "nf-oct-package" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-octicon "nf-oct-package" :face face :height size) sep)
      :extensions (tag-closed)
      :fallback 'same-as-icon)
     (treemacs-create-icon
@@ -252,9 +252,8 @@
      :icon (format "%s%s" (nerd-icons-faicon "nf-fa-briefcase" :face face :height size) sep)
      :extensions (briefcase)
      :fallback 'same-as-icon)
-
     (treemacs-create-icon
-     :icon (format " %s%s%s" sep (nerd-icons-faicon "nf-fa-file_o" :face face :height size) sep)
+     :icon (format "%s%s" (nerd-icons-faicon "nf-fa-file_o" :face face :height size) sep)
      :extensions (fallback)
      :fallback 'same-as-icon)))
 
