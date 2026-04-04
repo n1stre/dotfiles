@@ -22,6 +22,8 @@ filename2|operation|destination2
 ```
 
 Where:
+| Segment | Description |
+|---------|-------------|
 | `filename` | Path to file or folder relative to `deploy.sh` script |
 | `operation` | Method of copying. Currently only supports `symlink` |
 | `destination` | Target path relative to current user's home directory (`$HOME`) |
