@@ -6,22 +6,22 @@ SCRIPT_DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
 
 symlinkFile() {
     filename="$SCRIPT_DIR/$1"
-    destination="$HOME/$2/$1"
+    destination="$HOME/$2"
 
     if [[ ! -f "$filename" && ! -d "$filename" ]]; then
         echo "[ERROR] $filename does not exist."
         exit 1
     fi
 
-    if [ -L "$destination" ]; then
-        echo "[WARNING] $filename already symlinked"
-        return
-    fi
-
     if [ -e "$destination" ]; then
         echo "[ERROR] $destination exists but it's not a symlink. Please fix that manually"
         exit 1
     fi
+
+    if [ -L "$destination" ]; then
+        echo "[WARNING] $filename already symlinked"
+        return
+    fi    
 
     mkdir -p $(dirname "$destination")
     ln -s "$filename" "$destination"

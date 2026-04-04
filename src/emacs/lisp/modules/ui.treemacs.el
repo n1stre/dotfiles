@@ -1,17 +1,11 @@
-(use-package nerd-icons
-  ;; :custom
-  ;; The Nerd Font you want to use in GUI
-  ;; "Symbols Nerd Font Mono" is the default and is recommended
-  ;; but you can use any other Nerd Font if you want
-  ;; (nerd-icons-font-family "Symbols Nerd Font Mono")
-  )
-
 (use-package treemacs
   :ensure t
   :defer t
   :init
   (with-eval-after-load 'winum
     (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
+  ;; (with-eval-after-load 'treemacs
+  ;;   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
   :config
   (progn
     (setq treemacs-buffer-name-function            #'treemacs-default-buffer-name
@@ -78,7 +72,10 @@
     (treemacs-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
-    (treemacs-resize-icons 16)		
+    (treemacs-resize-icons 16)
+    (set-face-background 'treemacs-window-background-face "#292c3c")
+    (set-face-foreground 'treemacs-git-modified-face "#e5c890")
+    ;; (set-face-background 'treemacs-hl-line-face "green")
     
     (when treemacs-python-executable
       (treemacs-git-commit-diff-mode t))

@@ -10,13 +10,14 @@
 (require 'core-keybinds)
 
 (require 'ui.theme)
+(require 'ui.dashboard)
+(require 'ui.modeline.doom)
 (require 'ui.treemacs)
 
-(require 'treesitter) 
+(require 'treesitter)
 (require 'lsp)
 (require 'linting) 
 (require 'completion)
-(require 'formatting) 
+(require 'formatting)
 (require 'git)
 
-(insert "Hello")
