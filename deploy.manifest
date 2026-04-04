@@ -1,1 +1,2 @@
 src/emacs|symlink|.emacs.d
+src/opencode/opencode.json|symlink|.config/opencode/opencode.jsonc
