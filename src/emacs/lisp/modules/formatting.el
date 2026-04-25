@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (use-package apheleia
   :hook (prog-mode . apheleia-mode)
   :config

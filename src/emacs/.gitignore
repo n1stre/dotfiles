@@ -4,4 +4,6 @@ auto-save-list
 tree-sitter
 org-persist
 eshell
+transient
 .cache
+projects

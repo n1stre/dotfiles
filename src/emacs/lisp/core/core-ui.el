@@ -1,19 +1,22 @@
+;;; -*- lexical-binding: t; -*-
+
 (menu-bar-mode -1) ;; disable top menu bar
 (tool-bar-mode -1) ;; disable toolbar
 (scroll-bar-mode -1) ;; disable scrollbar
 
-(setq 
- inhibit-startup-screen t  ;; disable startup screen
- )
+(setq inhibit-startup-screen t)  ;; disable startup screen
+(setq default-tab-width 2)
 
-(setopt display-line-numbers-width-start 100)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+
+(setopt display-line-numbers-width-start 500)
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 
 
 ;; (set-face-attribute 'line-number nil :background nil)   
 ;; (set-face-attribute 'line-number-current-line nil :foreground "yellow" :background "blue")   
-(set-face-attribute 'default nil :font "GeistMono Nerd Font" :height 140)
-;; (set-face-attribute 'default nil :font "Menlo" :height 150)
+
 
 
 ;; (setq display-time-day-and-date nil)

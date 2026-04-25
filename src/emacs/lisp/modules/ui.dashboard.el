@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (use-package dashboard
   :ensure t
   :config
@@ -41,13 +43,14 @@
                           ;; (projects  . 5)
                           (agenda    . 5)
                           ;; (registers . 5) 
-			  )
-	)
+			                    )
+	      )
 
   (setq dashboard-display-icons-p t)     ; display icons on both GUI and terminal
   (setq dashboard-icon-type 'nerd-icons) ; use `nerd-icons' package
-  
-  (dashboard-setup-startup-hook))
+
+  (dashboard-setup-startup-hook)
+  )
 
 
 (provide 'ui.dashboard)

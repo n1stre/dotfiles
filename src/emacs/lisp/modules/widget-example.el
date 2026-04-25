@@ -82,3 +82,5 @@
   (use-local-map widget-keymap)
   (widget-setup))
 
+
+(provide 'widget-example)

@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror 'nomessage)
 
@@ -6,6 +8,7 @@
 (add-to-list 'load-path "~/.emacs.d/lisp/modules/")
 
 (require 'core-packages)
+(require 'core-functions)
 (require 'core-ui)
 (require 'core-keybinds)
 
@@ -20,4 +23,6 @@
 (require 'completion)
 (require 'formatting)
 (require 'git)
+
+;;(require 'widget-example)
 
